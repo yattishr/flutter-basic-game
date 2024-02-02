@@ -15,6 +15,7 @@ import 'settings/settings_screen.dart';
 import 'style/my_transition.dart';
 import 'style/palette.dart';
 import 'win_game/win_game_screen.dart';
+import 'play_chicken/play_chicken_widget.dart';
 
 /// The router describes the game's navigational hierarchy, from the main
 /// screen through settings screens all the way to each individual level.
@@ -81,6 +82,11 @@ final router = GoRouter(
           path: 'settings',
           builder: (context, state) =>
               const SettingsScreen(key: Key('settings')),
+        ),
+        GoRoute(
+          path: 'chicken',
+          builder: (context, state) =>
+              const PlayChickenWidget(key: Key('chicken')),
         ),
       ],
     ),

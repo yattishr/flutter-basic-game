@@ -29,7 +29,7 @@ class MainMenuScreen extends StatelessWidget {
           child: Transform.rotate(
             angle: -0.1,
             child: const Text(
-              'Planet Puzzle 🌍🌊',
+              'Play Chicken \n🐔',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'Permanent Marker',
@@ -55,6 +55,11 @@ class MainMenuScreen extends StatelessWidget {
               child: const Text('Settings'),
             ),
             _gap,
+            MyButton(
+              onPressed: () => GoRouter.of(context).push('/chicken'),
+              child: const Text('Play Chicken'),
+            ),
+            _gap,
             Padding(
               padding: const EdgeInsets.only(top: 32),
               child: ValueListenableBuilder<bool>(
@@ -68,7 +73,7 @@ class MainMenuScreen extends StatelessWidget {
               ),
             ),
             _gap,
-            const Text('Music by Mr Smith'),
+            const Text('Music by Dre Dre'),
             _gap,
           ],
         ),
